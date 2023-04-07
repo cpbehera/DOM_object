@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+
+        <div>
+            <p id="url"></p>
+            <p id="width"></p>
+            <p id="height"></p>
+            <p>The location objects displays current Url but history object contains informations about the previous url's that has been displayed in the window
+                <br>
+                Example:- Windows.location displays the current url.You can see the 1st paragraph of this page.<br>
+                Windows.history :-<span id="history"></span>
+            </p>
+        </div>
+        <script>
     
-    <!-- 1 -->
+            //    1.a
 
-    <!-- a -->
-
-
-    <!-- b -->
-
-    
-    <!-- 2 -->
-</body>
+            console.log(window);
+            document.getElementById('url').textContent = "Windows Url :-"+window.location;
+            document.getElementById('width').textContent = "Windows Width is :-"+window.innerWidth +"px";
+            document.getElementById('height').textContent = "Windows height is :-"+window.innerHeight +"px";
+            document.getElementById('history').textContent = window.history.length;
+    </script>
+    </body>
 </html>
